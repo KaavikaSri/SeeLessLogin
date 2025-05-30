@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Login Page</title>
+    <style>
+        body {
+            font-size: 20px;
+            text-align: center;
+            padding: 50px;
+            background: url('login.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body onload="speak('Welcome to the accessible login page')">
+    <h1>Welcome to Our Site</h1>
+
+    <div class="nav">
+        <!-- Login Button -->
+        <button onclick="window.location.href='login.html'">Login</button>
+
+        <!-- Sign In Button -->
+        <button onclick="window.location.href='signIn.html'">Sign In</button>
+    </div>
+    
+    <script>
+        function speak(text) {
+            let speech = new SpeechSynthesisUtterance(text);
+            speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>
